@@ -1,0 +1,204 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif; /* Установка шрифта для всего документа */
+    margin: 0; /* Убираем внешние отступы у body */
+    padding: 0; /* Убираем внутренние отступы у body */
+    text-align: center; /* Выравниваем текст по центру */
+    background-color: beige; /* Устанавливаем цвет фона на бежевый */
+}
+
+header {
+    background-color: #f8f8f8; /* Цвет фона для заголовка */
+    padding: 10px 0; /* Внутренний отступ для верхнего и нижнего края заголовка */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень заголовку */
+}
+
+nav ul {
+    list-style: none; /* Убираем маркеры у списка */
+    padding: 0; /* Убираем внутренние отступы у списка */
+    margin: 0; /* Убираем внешние отступы у списка */
+    display: flex; /* Отображаем элементы списка в строку */
+    justify-content: center; /* Выравниваем элементы списка по центру */
+}
+
+nav ul li {
+    margin: 0 15px; /* Отступы между элементами списка */
+}
+
+.nav-button {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #000; /* Цвет текста ссылок */
+    font-weight: bold; /* Жирный шрифт */
+    padding: 10px 15px; /* Внутренние отступы кнопок */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+.nav-button:hover {
+    background-color: #ddd; /* Цвет фона при наведении */
+}
+
+h1 {
+    font-size: 3em; /* Размер шрифта для заголовка h1 */
+    margin: 50px 0; /* Внешние отступы сверху и снизу заголовка */
+}
+
+.orange {
+    color: orange; /* Цвет текста для элементов с классом .orange */
+}
+
+.promo {
+    display: flex; /* Отображаем элементы блока в строку */
+    justify-content: space-around; /* Равномерно распределяем элементы по ширине */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    margin: 30px 0; /* Внешние отступы блока */
+}
+
+.promo-text {
+    font-size: 1.2em; /* Размер шрифта текста промо */
+    max-width: 50%; /* Максимальная ширина текста промо */
+}
+
+.trial-button {
+    padding: 15px 30px; /* Внутренние отступы кнопки */
+    font-size: 1em; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель мыши при наведении на кнопку */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+.trial-button:hover {
+    background-color: #ddd; /* Цвет фона при наведении */
+}
+
+.yoga-info {
+    opacity: 1; /* Начальное значение прозрачности */
+    transition: opacity 0.5s ease-in-out; /* Плавное изменение прозрачности */
+    height: 150px; /* Увеличиваем высоту блока */
+    margin-right: 20px; /* Отступ между блоками */
+    padding: 20px; /* Внутренние отступы блока */
+    border: 1px solid #ccc; /* Граница блока */
+    box-sizing: border-box; /* Учитываем границу в общей ширине блока */
+    display: inline-block; /* Размещаем блоки в одну линию */
+    vertical-align: top    /* Выравниваем блоки по верхнему краю */
+}
+
+.yoga-info.fade-out {
+    opacity: 0; /* Устанавливаем прозрачность при анимации исчезновения */
+}
+
+.images {
+    position: relative; /* Относительное позиционирование */
+    margin: 50px 0; /* Внешние отступы */
+    display: flex; /* Отображаем элементы блока в строку */
+    justify-content: center; /* Выравниваем элементы по центру */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+}
+
+.yoga-mat {
+    position: relative; /* Относительное позиционирование */
+    z-index: 1; /* Порядок слоя */
+    width: 700px; /* Указываем явную ширину ковра */
+    max-width: 100%; /* Делаем так, чтобы ковёр был не шире окна браузера */
+    height: auto; /* Автоматическая высота */
+    margin: 0px auto 0; /* Центрируем ковер и увеличиваем отступ сверху */
+}
+
+.dog1 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: -5%; /* Отступ для первой собаки */
+    left: 30%; /* Позиция по горизонтали */
+    font-size: 1.5em; /* Размер шрифта */
+    width: 20%; /* Примерная ширина для изображения собаки */
+    z-index: 2; /* Порядок слоя */
+}
+
+.dog2 {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 15%; /* Отступ для второй собаки */
+    right: 30%; /* Позиция по горизонтали */
+    font-size: 1.5em; /* Размер шрифта */
+    width: 20%; /* Примерная ширина для изображения собаки */
+    z-index: 2; /* Порядок слоя */
+}
+
+.bottom-section {
+    margin: 50px 0; /* Внешние отступы блока */
+}
+
+.bottom-button {
+    padding: 15px 30px; /* Внутренние отступы кнопки */
+    font-size: 1em; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель мыши при наведении на кнопку */
+    margin: 10px; /* Внешние отступы кнопки */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+.bottom-button:hover {
+    background-color: #ddd; /* Цвет фона при наведении */
+}
+
+.bottom-section p {
+    margin-top: 20px; /* Внешний отступ сверху */
+    font-size: 1.2em; /* Размер шрифта */
+}
+
+/* Анимации */
+@keyframes fadeInTop {
+    from {
+        opacity: 0; /* Начальное значение прозрачности */
+        transform: translateY(-150px); /* Начальное положение */
+    }
+    to {
+        opacity: 1; /* Конечное значение прозрачности */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0; /* Начальное значение прозрачности */
+        transform: translateY(150px); /* Начальное положение */
+    }
+    to {
+        opacity: 1; /* Конечное значение прозрачности */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0; /* Начальное значение прозрачности */
+        transform: translateX(-350px); /* Начальное положение */
+    }
+    to {
+        opacity: 1; /* Конечное значение прозрачности */
+        transform: translateX(0); /* Конечное положение */
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0; /* Начальное значение прозрачности */
+        transform: translateX(350px); /* Начальное положение */
+    }
+    to {
+        opacity: 1; /* Конечное значение прозрачности */
+        transform: translateX(0); /* Конечное положение */
+    }
+}
+
+#header, #main-content > h1, .promo {
+    animation: fadeInTop 1s ease-in-out; /* Применяем анимацию для элементов */
+}
+
+.images .yoga-mat, .bottom-section {
+    animation: fadeInBottom 1s ease-in-out; /* Применяем анимацию для элементов */
+}
+
+.dog1 {
+    animation: fadeInLeft 1s ease-in-out; /* Применяем анимацию для элементов */
+}
+
+.dog2 {
+    animation: fadeInRight 1s ease-in-out; /*Применяем анимацию для элементов */
+
+}
