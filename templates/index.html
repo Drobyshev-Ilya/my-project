@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия йоги "Собака сутулая"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-button">Студия йоги</a></li>
+                <li><a href="#" class="nav-button">Мероприятия</a></li>
+                <li><a href="#" class="nav-button">Расписание</a></li>
+                <li><a href="#" class="nav-button">Стоимость</a></li>
+                <li><a href="#" class="nav-button">О нас</a></li>
+                <li><a href="tel:80000000000" class="nav-button">8-000-000-00-00</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Flash сообщения -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="flash-messages">
+              {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        <!-- Заголовок -->
+        <div class="header-container">
+            <div class="lines-container">
+                <hr class="line">
+                <h1><span class="orange">СОБАКА</span> СУТУЛАЯ</h1>
+                <hr class="line">
+            </div>
+        </div>
+        <div class="promo">
+            <p class="promo-text">Приведи свою сутулую подругу и получи скидку 20% на второй абонемент</p>
+            <button class="trial-button" onclick="window.location.href='/feedback'">Пробное занятие</button>
+        </div>
+        <!-- Картинки -->
+        <div class="images">
+            <img src="{{ url_for('static', filename='images/kover.png') }}" alt="Ковёр для йоги" class="yoga-mat">
+            <img src="{{ url_for('static', filename='images/sobaka1.png') }}" alt="Собака1" class="dog1">
+            <img src="{{ url_for('static', filename='images/sobaka2.png') }}" alt="Собака2" class="dog2">
+        </div>
+
+        <!-- Нижний блок -->
+        <div class="bottom-section">
+            <div class="yoga-info">
+                <h2>Йога-терапия</h2>
+                <p>Йога-терапия – это комплекс практик, направленных на оздоровление организма и восстановление психоэмоционального равновесия. Она помогает решить широкий спектр здоровенных проблем, начиная от болей в спине и заканчивая стрессами и депрессиями.</p>
+            </div>
+            <p>СОБАКАСУТУЛАЯ.РУ</p>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
