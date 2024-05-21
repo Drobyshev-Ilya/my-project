@@ -8,9 +8,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'in.drobyshev96@gmail.com'  # Замените на ваш email
-app.config['MAIL_PASSWORD'] = 'qedg mpjj tfwb hzuc'  # Замените на ваш пароль
-app.config['MAIL_DEFAULT_SENDER'] = 'in.drobyshev96@gmail.com'  # Замените на ваш email
+app.config['MAIL_USERNAME'] = 'in.drobyshev96@gmail.com'  # email
+app.config['MAIL_PASSWORD'] = 'qedg mpjj tfwb hzuc'  # пароль
+app.config['MAIL_DEFAULT_SENDER'] = 'in.drobyshev96@gmail.com'  # email
 
 mail = Mail(app)
 
@@ -38,5 +38,5 @@ def feedback():
     return render_template('feedback.html')
 
 if __name__ == '__main__':
-    app.secret_key = 'qedg mpjj tfwb hzuc'  # Добавьте секретный ключ для использования flash сообщений
+    app.secret_key = 'qedg mpjj tfwb hzuc'  # секретный ключ для использования flash сообщений
     app.run(debug=True)
